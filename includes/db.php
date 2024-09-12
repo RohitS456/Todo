@@ -1,14 +1,12 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "password";
-$dbname = "task_manager";
+$host = 'localhost';
+$user = 'root';        // Default XAMPP username is 'root'
+$pass = '';            // No password for XAMPP by default
+$db_name = 'todo';     // Your database name
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($host, $user, $pass, $db_name);
 
-// Check connection
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    die('Database connection error: ' . $conn->connect_error);
 }
 ?>
